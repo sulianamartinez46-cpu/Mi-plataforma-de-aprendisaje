@@ -2,18 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Plataforma</title>
-    <style>
-        body {font-family: Arial; text-align: center; margin-top: 100px; background: #f0f4ff;}
-        h1 {color: #4a6cf7;}
-        .card {background: white; padding: 40px; border-radius: 12px; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.1);}
-    </style>
+    <title>Mi Plataforma de Aprendizaje</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="card">
-        <h1>Bienvenido a Mi Plataforma de Aprendizaje</h1>
-        <p>Servidor PHP corriendo en Render ✅</p>
-        <p>Puerto: <?php echo $_ENV['PORT'] ?? '10000'; ?></p>
+        <h1>🎓 Bienvenido</h1>
+        <p>Mi Plataforma de Aprendizaje</p>
+        
+        <form method="POST" id="loginForm">
+            <input type="text" name="user" placeholder="Usuario" required>
+            <input type="password" name="pass" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <div id="mensaje">
+        <?php
+        if($_POST){
+            $user = htmlspecialchars($_POST['user']);
+            echo "<div class='ok'>Hola $user 👋 Ya estás dentro</div>";
+        }
+        ?>
+        </div>
+        
+        <span class="badge">Puerto <?php echo $_ENV['PORT'] ?? '10000'; ?></span>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
