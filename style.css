@@ -1,12 +1,3 @@
-<?php
-$alumno = "Suli 💗";
-$progreso = 47;
-$paqs = [
-  ["id"=>"p1", "tema"=>"Ecuaciones Lineales", "cat"=>"Matemáticas", "porc"=>60, "xp"=>240],
-  ["id"=>"p2", "tema"=>"Citas APA 7ma", "cat"=>"Redacción", "porc"=>30, "xp"=>120],
-  ["id"=>"p3", "tema"=>"Excel Avanzado", "cat"=>"Ofimática", "porc"=>0, "xp"=>0]
-];
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
